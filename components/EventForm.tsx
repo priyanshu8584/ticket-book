@@ -280,7 +280,7 @@ export default function EventForm({ mode, initialData }: EventFormProps) {
                 <FormControl>
                   <div className="relative">
                     <span className="absolute left-2 top-1/2 -translate-y-1/2">
-                      £
+                   CODE&#8377;
                     </span>
                     <Input
                       type="number"

@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
       {
         hostname:'limitless-whale-885.convex.cloud',
         protocol:'https'
+      },{
+        hostname:'enchanted-mandrill-466.convex.cloud',
+        protocol:'https'
       }
     ]
   }

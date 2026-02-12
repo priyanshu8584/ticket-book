@@ -21,13 +21,14 @@ It also includes administrative capabilities for managing events and bookings.
 This repository reflects a professional engineering mindset with clean architecture and scalable structuring.
 
 🛠 Tech Stack
-Layer	Technology
+
 Frontend	Next.js / React
 Styling	Tailwind CSS
 Backend APIs	Next.js API Routes
 Database	(Add MongoDB / Prisma / SQL DB Info)
 Deployment	Vercel
 Language	TypeScript
+
 🏗 Architecture & Design
 
 Ticket-Book follows a scalable layered architecture, separating concerns across presentation, logic, and data layers:

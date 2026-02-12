@@ -2,7 +2,7 @@
 
 Ticket-Book is a full-stack ticketing and booking web application designed to manage events, enable users to view available events, and book tickets seamlessly. This project demonstrates real-world application workflows, database integration, API design, and responsive UI development using modern web technologies.
 
-Live Demo: (Add your deployed URL here if available)
+Live Demo: https://ticket-book-three.vercel.app/
 
 🚀 Project Overview
 

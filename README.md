@@ -25,7 +25,7 @@ This repository reflects a professional engineering mindset with clean architect
 Frontend	Next.js / React
 Styling	Tailwind CSS
 Backend APIs	Next.js API Routes
-Database	(Add MongoDB / Prisma / SQL DB Info)
+Database	PosgreSQL
 Deployment	Vercel
 Language	TypeScript
 

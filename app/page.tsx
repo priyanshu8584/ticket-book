@@ -1,12 +1,9 @@
 import EventList from "@/components/EventList";
 
-
 export default function Home() {
   return (
-   <div>
-    <h1>Welcome to ticketr
-      <EventList/>
-    </h1>
-   </div>
+    <main className="min-h-screen bg-slate-50/70 dark:bg-[#07090E] transition-colors duration-200">
+      <EventList />
+    </main>
   );
 }

@@ -30,7 +30,7 @@ export default function SearchPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#07090E] py-12 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         {/* Search Results Header */}
         <div className="flex items-center gap-3 mb-8">
           <Search className="w-6 h-6 text-blue-500" />
@@ -63,7 +63,7 @@ export default function SearchPage() {
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
               Upcoming Events
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {upcomingEvents.map((event) => (
                 <EventCard key={event._id} eventId={event._id} />
               ))}
@@ -77,7 +77,7 @@ export default function SearchPage() {
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
               Past Events
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {pastEvents.map((event) => (
                 <EventCard key={event._id} eventId={event._id} />
               ))}

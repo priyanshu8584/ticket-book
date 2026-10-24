@@ -9,7 +9,7 @@ import { ShieldCheck, Sparkles, Ticket } from "lucide-react";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/90 dark:bg-[#07090E]/85 backdrop-blur-xl transition-colors duration-200">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-3.5 px-4 py-3 sm:px-6 lg:flex-row lg:px-8">
+      <div className="mx-auto flex w-full max-w-[1800px] flex-col items-center gap-3.5 px-4 py-3 sm:px-6 lg:flex-row lg:px-10 xl:px-12">
         <div className="flex w-full items-center justify-between lg:w-auto">
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-md shadow-blue-600/25 transition-transform duration-150 group-hover:scale-105">

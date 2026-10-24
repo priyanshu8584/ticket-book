@@ -148,7 +148,7 @@ const EventList = () => {
   const cities = ["all", "Kolkata", "Mumbai", "New Delhi", "Greater Noida"];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[1800px] px-4 py-6 sm:px-6 lg:px-10 xl:px-12">
       {/* Premium Dark Hero Showcase */}
       <div className="relative mb-10 overflow-hidden rounded-3xl border border-slate-800/90 bg-[#0B0F19] p-6 text-white shadow-2xl sm:p-10 lg:p-12">
         {/* Subtle Radial Accent Glows */}
@@ -368,9 +368,9 @@ const EventList = () => {
         )}
       </div>
 
-      {/* Upcoming Events 3-Column Grid */}
+      {/* Upcoming Events Full-Width Grid */}
       {filteredUpcoming.length > 0 ? (
-        <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredUpcoming.map((event) => (
             <EventCard key={event._id} eventId={event._id} />
           ))}
@@ -413,7 +413,7 @@ const EventList = () => {
               {pastEvents.length} Concluded
             </span>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {pastEvents.map((event) => (
               <EventCard key={event._id} eventId={event._id} />
             ))}

@@ -43,7 +43,7 @@ export default function EventPage() {
 
   return (
     <div className="min-h-screen bg-slate-50/80 dark:bg-[#07090E] py-8 sm:py-12 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         {/* Back button */}
         <button
           onClick={() => router.push("/")}

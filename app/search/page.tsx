@@ -14,7 +14,7 @@ export default function SearchPage() {
 
   if (!searchResults) {
     return (
-      <div className="min-h-[400px] flex items-center justify-center bg-slate-50 dark:bg-[#07090E]">
+      <div className="min-h-[400px] flex items-center justify-center bg-zinc-50/50 dark:bg-[#09090B]">
         <Spinner />
       </div>
     );
@@ -29,30 +29,30 @@ export default function SearchPage() {
     .sort((a, b) => b.eventDate - a.eventDate);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#07090E] py-12 transition-colors duration-200">
-      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+    <div className="min-h-screen bg-zinc-50/50 dark:bg-[#09090B] py-10">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Search Results Header */}
         <div className="flex items-center gap-3 mb-8">
-          <Search className="w-6 h-6 text-blue-500" />
+          <Search className="w-5 h-5 text-zinc-400" />
           <div>
-            <h1 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Search Results for &ldquo;{query}&rdquo;
+            <h1 className="text-xl font-bold text-zinc-900 dark:text-white">
+              Results for &ldquo;{query}&rdquo;
             </h1>
-            <p className="text-slate-600 dark:text-slate-400 mt-1 text-sm">
-              Found {searchResults.length} matching events
+            <p className="text-zinc-500 dark:text-zinc-400 mt-0.5 text-xs">
+              {searchResults.length} events found
             </p>
           </div>
         </div>
 
         {/* No Results State */}
         {searchResults.length === 0 && (
-          <div className="text-center py-12 bg-white dark:bg-[#0D111A] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
-            <Search className="w-12 h-12 text-slate-400 mx-auto mb-4" />
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+          <div className="text-center py-12 bg-white dark:bg-[#121215] border border-zinc-200 dark:border-zinc-800 rounded-xl">
+            <Search className="w-8 h-8 text-zinc-400 mx-auto mb-3" />
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">
               No events found
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mt-1 text-sm">
-              Try adjusting your search terms or browse all upcoming events
+            <p className="text-zinc-500 dark:text-zinc-400 mt-1 text-xs">
+              Try a different artist, venue, or city
             </p>
           </div>
         )}
@@ -60,7 +60,7 @@ export default function SearchPage() {
         {/* Upcoming Events */}
         {upcomingEvents.length > 0 && (
           <div className="mb-12">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
               Upcoming Events
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -74,7 +74,7 @@ export default function SearchPage() {
         {/* Past Events */}
         {pastEvents.length > 0 && (
           <div>
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
               Past Events
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

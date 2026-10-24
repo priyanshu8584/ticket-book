@@ -19,9 +19,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ticketr — Live Event Ticketing & Marketplace",
+  title: "Ticketr — Live Events & Tickets",
   description:
-    "Discover and book verified tickets for live concerts, stadium sports, festivals, and comedy shows.",
+    "Discover and book tickets for concerts, sports, festivals, and live shows.",
   icons: {
     icon: [
       { url: "/ticketr-favicon.svg", type: "image/svg+xml" },
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 dark:bg-[#07090E] text-slate-900 dark:text-slate-100 transition-colors duration-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50/50 dark:bg-[#09090B] text-zinc-900 dark:text-zinc-100`}
       >
         <ConvexClientProvider>
           <ClerkProvider>

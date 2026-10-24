@@ -16,22 +16,24 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSearch} className="relative group">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 w-4 h-4 transition-colors duration-150" />
+    <div className="w-full">
+      <form onSubmit={handleSearch} className="relative">
+        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500 w-4 h-4 pointer-events-none" />
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search artists, stadiums, cities, or tours..."
-          className="w-full py-2.5 pl-11 pr-24 bg-slate-100/80 hover:bg-slate-100 focus:bg-white dark:bg-slate-900/90 dark:hover:bg-slate-900 dark:focus:bg-slate-900 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 rounded-full border border-slate-200/90 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/25 focus:border-blue-500 transition-all duration-150"
+          placeholder="Search events, artists, or venues..."
+          className="w-full h-10 pl-10 pr-20 bg-zinc-100/80 dark:bg-zinc-900 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-500 rounded-lg border border-zinc-200/80 dark:border-zinc-800 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-700 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
         />
-        <button
-          type="submit"
-          className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-colors duration-150 shadow-sm"
-        >
-          Search
-        </button>
+        {query.trim().length > 0 && (
+          <button
+            type="submit"
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-3 py-1 rounded-md text-xs font-medium hover:opacity-90 transition-opacity"
+          >
+            Search
+          </button>
+        )}
       </form>
     </div>
   );

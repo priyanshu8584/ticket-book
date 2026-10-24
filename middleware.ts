@@ -7,13 +7,19 @@ export default async function middleware(
   req: NextRequest,
   event: NextFetchEvent
 ) {
-  // When a real CLERK_SECRET_KEY is configured (e.g., on Vercel production), run standard Clerk middleware
-  const secretKey = process.env.CLERK_SECRET_KEY || "";
-  if (secretKey && !secretKey.includes("placeholder")) {
-    return await baseClerkMiddleware(req, event);
+  // On production domains (e.g. Vercel), run standard Clerk middleware with fallback safety
+  if (
+    req.nextUrl.hostname !== "localhost" &&
+    req.nextUrl.hostname !== "127.0.0.1"
+  ) {
+    try {
+      return await baseClerkMiddleware(req, event);
+    } catch {
+      // Fall through to safe pass-through if secret key is missing/invalid
+    }
   }
 
-  // Local development fallback when CLERK_SECRET_KEY is not present:
+  // Localhost safe pass-through without dev-browser handshake redirect loops:
   if (req.nextUrl.searchParams.has("__clerk_handshake")) {
     const cleanUrl = req.nextUrl.clone();
     cleanUrl.searchParams.delete("__clerk_handshake");
